@@ -10,3 +10,10 @@ const options = {
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));
+
+
+const container = document.querySelector("#container");
+
+const cards = document.createElement("div");
+cards.classList.add("grid");
+container.appendChild(cards);
