@@ -8,12 +8,11 @@ const options = {
   
   fetch('https://api.themoviedb.org/3/trending/all/day?language=en-US', options)
     .then(response => response.json())
-    .then(response => console.log(response))
+    // .then(response => console.log(response))
+    .then(data => {
+      const apiResponse = document.getElementsByClassName("apiResponse")[0];
+      apiResponse.textContent = JSON.stringify(data);
+      
+    })
     .catch(err => console.error(err));
-
-
-const container = document.querySelector("#container");
-
-const cards = document.createElement("div");
-cards.classList.add("grid");
-container.appendChild(cards);
+   
