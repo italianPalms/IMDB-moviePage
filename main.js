@@ -1,6 +1,4 @@
 
-
-
 async function getMovies() {
   let response = await fetch('https://api.themoviedb.org/3/trending/all/week?language=en-US&api_key=ccecc2f5025505f3a623778fa7831646');
   let data = await response.json();
@@ -33,7 +31,3 @@ getMovies().then(response => {
   });
   
 });
-
-
-
-
